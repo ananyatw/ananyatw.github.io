@@ -1,0 +1,114 @@
+@font-face{
+    font-family: gameFont;
+    src: url(../font/font.ttf);
+  }
+  
+  @font-face{
+    font-family: codeFont;
+    src: url(../font/Anonymous.ttf);
+  }
+  
+  body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin-left: 0%;
+    margin-top: 0%;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  
+  #main1{
+    width:100%;
+    height:91%;
+    background: #5EAD82;
+  }
+  
+  #content1{
+    font-size: 500%;
+    color: #ffffff;
+    margin-left: 28%;
+    text-align: center;
+    font-family: codeFont;
+    padding: 8%;
+    width: 30%
+  }
+  
+  #main2{
+    width:100%;
+    height:120%;
+    background: white;
+  }
+  
+  .container1{
+    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 7%;
+    width: 60%;
+    height: 35.5%;
+    margin-left: 20%;
+  }
+  
+  .container1:hover{
+    background-color: #f4f3f3;
+    transition: 0.3s;
+  }
+  
+  .half{
+    position: relative;
+    width: calc(100% / 2);
+    bottom: calc(100% / 5);
+  }
+  
+  .text{
+    color: black;
+    display: inline-block;
+    position: relative;
+    margin: 30%;
+    text-align: center;
+    font-size: 150%;
+    font-family: gameFont;
+    width: 50%;
+  }
+  
+  h4{
+    color: #5EAD82;
+  }
+  
+  /*#home{
+    text-align: right;
+  }*/
+  
+  #nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 1%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    font-family: "Monaco X";
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #5EAD82;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a/*, .dropbtn*/{
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  li a:hover/*, dropdown:hover .dropbtn*/{
+    /*background-color: #b6b3a8;*/
+    text-shadow: 1px 1px #1D91AD, 2px 2px #1D91AD, 3px 3px #1D91AD, 4px 4px #1D91AD, 5px 5px #1D91AD, 6px 6px #1D91AD;
+  }

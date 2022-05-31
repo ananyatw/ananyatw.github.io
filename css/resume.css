@@ -1,0 +1,72 @@
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin-left: 0%;
+    margin-top: 0%;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  #main1{
+    width:100%;
+    height:90.1%;
+    background: #589BAC;
+  }
+  
+  .text {
+    background-color: white;
+    font-size: 10vw; 
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+  }
+  
+  #main2{
+      width: 100%;
+      height: 100%;
+  }
+  
+  #pdf{
+      margin-top: 5%;
+      text-align: center;
+  }
+  
+  #nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 1%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    font-family: "Monaco X";
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #589BAC;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a/*, .dropbtn*/{
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  li a:hover/*, dropdown:hover .dropbtn*/{
+    /*background-color: #b6b3a8;*/
+    text-shadow: 1px 1px #6E8DAC, 2px 2px #6E8DAC, 3px 3px #6E8DAC, 4px 4px #6E8DAC, 5px 5px #6E8DAC, 6px 6px #6E8DAC;
+  }
