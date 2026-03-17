@@ -1,6 +1,11 @@
 ---
 date: '2026-03-13'
 title: 'Project Ember — Under Construction'
+github: ''
+external: ''
+ios: ''
+android: ''
+company: 'Personal'
 tech:
   - SwiftUI
   - iOS

@@ -1,6 +1,11 @@
 ---
 date: '2026-03-15'
 title: 'Project Nova — Under Construction'
+github: ''
+external: ''
+ios: ''
+android: ''
+company: 'Personal'
 tech:
   - Python
   - FastAPI
