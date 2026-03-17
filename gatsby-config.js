@@ -5,7 +5,7 @@ module.exports = {
     title: 'Ananya Tiwari',
     description:
       "I build software at the intersection of DevOps and AI — with an eye toward systems that are clean, scalable, and worth maintaining. I think carefully about how tools are used, not just how they're built.",
-    siteUrl: 'https://anantw.github.io', // No trailing slash allowed!
+    siteUrl: 'https://ananyatw.github.io', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
   },
