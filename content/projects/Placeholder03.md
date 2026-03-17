@@ -12,6 +12,5 @@ tech:
   - Node.js
 placeholder: true
 showInProjects: true
-company: 'Personal'
 ---
 Designing a lightweight analytics dashboard focused on clarity and accessibility.

@@ -12,6 +12,5 @@ tech:
   - Firebase
 placeholder: true
 showInProjects: true
-company: 'Personal'
 ---
 Prototyping a habit-building companion with gentle reminders and progress snapshots.
