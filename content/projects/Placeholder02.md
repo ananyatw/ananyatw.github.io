@@ -12,6 +12,5 @@ tech:
   - PostgreSQL
 placeholder: true
 showInProjects: true
-company: 'Personal'
 ---
 Building a backend service for structured journaling and insights. More details coming soon.
