@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
 import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
-import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
+import { usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo, IconHex } from '@components/icons';
 
@@ -66,11 +66,19 @@ const StyledNav = styled.nav`
     ${({ theme }) => theme.mixins.flexCenter};
 
     a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       color: var(--green);
-      width: 42px;
       height: 42px;
       position: relative;
       z-index: 1;
+
+      .logo-mark {
+        position: relative;
+        width: 42px;
+        height: 42px;
+      }
 
       .hex-container {
         position: absolute;
@@ -97,12 +105,23 @@ const StyledNav = styled.nav`
         }
       }
 
+      .logo-text {
+        color: var(--lightest-slate);
+        font-family: var(--font-sans);
+        font-size: var(--fz-md);
+        letter-spacing: 0.02em;
+      }
+
       &:hover,
       &:focus {
         outline: 0;
         transform: translate(-4px, -4px);
         .hex-container {
           transform: translate(4px, 3px);
+        }
+
+        .logo-text {
+          color: var(--green);
         }
       }
     }
@@ -152,13 +171,9 @@ const StyledLinks = styled.div`
 
 const Nav = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
-  const scrollDirection = useScrollDirection('down');
-  const [scrolledToTop, setScrolledToTop] = useState(true);
+  const scrollDirection = 'up';
+  const scrolledToTop = true;
   const prefersReducedMotion = usePrefersReducedMotion();
-
-  const handleScroll = () => {
-    setScrolledToTop(window.pageYOffset < 50);
-  };
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -169,11 +184,8 @@ const Nav = ({ isHome }) => {
       setIsMounted(true);
     }, 100);
 
-    window.addEventListener('scroll', handleScroll);
-
     return () => {
       clearTimeout(timeout);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -185,31 +197,33 @@ const Nav = ({ isHome }) => {
     <div className="logo" tabIndex="-1">
       {isHome ? (
         <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
+          <div className="logo-mark">
+            <div className="hex-container">
+              <IconHex />
+            </div>
+            <div className="logo-container">
+              <IconLogo />
+            </div>
           </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
+          <span className="logo-text">Ananya Tiwari</span>
         </a>
       ) : (
         <Link to="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
+          <div className="logo-mark">
+            <div className="hex-container">
+              <IconHex />
+            </div>
+            <div className="logo-container">
+              <IconLogo />
+            </div>
           </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
+          <span className="logo-text">Ananya Tiwari</span>
         </Link>
       )}
     </div>
   );
 
-  const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-      Resume
-    </a>
-  );
+  const ResumeLink = null;
 
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
@@ -227,7 +241,7 @@ const Nav = ({ isHome }) => {
                     </li>
                   ))}
               </ol>
-              <div>{ResumeLink}</div>
+              {ResumeLink}
             </StyledLinks>
 
             <Menu />

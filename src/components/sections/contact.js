@@ -44,6 +44,7 @@ const StyledContactSection = styled.section`
 const Contact = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -55,16 +56,16 @@ const Contact = () => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+      <h2 className="overline">04. What’s Next?</h2>
 
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        Although I’m not currently looking for any new opportunities, my inbox is always open.
-        Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+        Good conversations find me easily. If you've got something interesting on your mind, my
+        inbox is the place.
       </p>
 
-      <a className="email-link" href={`mailto:${email}`}>
+      <a className="email-link" href={emailLink} target="_blank" rel="noopener noreferrer">
         Say Hello
       </a>
     </StyledContactSection>

@@ -53,6 +53,8 @@ const StyledProject = styled.li`
     &:focus-within {
       .project-inner {
         transform: translateY(-7px);
+        background-color: rgba(17, 34, 64, 0.7);
+        border-color: rgba(100, 255, 218, 0.25);
       }
     }
   }
@@ -63,7 +65,6 @@ const StyledProject = styled.li`
   }
 
   .project-inner {
-    ${({ theme }) => theme.mixins.boxShadow};
     ${({ theme }) => theme.mixins.flexBetween};
     flex-direction: column;
     align-items: flex-start;
@@ -71,7 +72,12 @@ const StyledProject = styled.li`
     height: 100%;
     padding: 2rem 1.75rem;
     border-radius: var(--border-radius);
-    background-color: var(--light-navy);
+    background-color: rgba(17, 34, 64, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
     transition: var(--transition);
     overflow: auto;
   }
@@ -268,7 +274,7 @@ const Projects = () => {
   };
 
   return (
-    <StyledProjectsSection>
+    <StyledProjectsSection id="projects">
       <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
 
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>

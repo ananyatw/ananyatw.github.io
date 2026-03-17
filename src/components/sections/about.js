@@ -125,7 +125,15 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = [
+    'Salesforce',
+    'Copado',
+    'AWS',
+    'Docker',
+    'Python',
+    'Generative AI',
+    'Autonomous agent design',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,33 +143,35 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Ananya and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hi, I'm Ananya, a product-minded technologist who likes to understand systems
+              end-to-end, from the infrastructure holding things together to the person on the
+              other side of the screen.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              My work lives at the intersection of DevOps, AI, and product thinking. I'm drawn to
+              problems where the technical decisions and the human ones are impossible to separate,
+              where building it right and building it for someone are the same task. I studied
+              Computer &amp; Information Technology at Purdue with a Minor in Design &amp;
+              Innovation, and that combination pretty much describes how I approach everything.
             </p>
 
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              My path has taken me from shipping enterprise automation at Copado in New Orleans, to
+              researching AI market trends across the MENA region at International Data
+              Corporation in Dubai, to building voice recognition and generation tools at a
+              podcast network startup. Along the way I've contributed to an internal shaping of
+              autonomous agent workflows, won a hackathon with a real-time financial analysis
+              platform, and placed in a design showcase for a human-centered hardware product built
+              from user interviews up.
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>
+              I care about work that's rigorous and thoughtful. Systems that hold up, products that
+              make sense, and the quiet satisfaction of getting both right at once.
+            </p>
+
+            <p>Lately I've been working with:</p>
           </div>
 
           <ul className="skills-list">
