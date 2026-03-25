@@ -2,9 +2,6 @@
 <h1 align="center">
   ananyatw.github.io
 </h1>
-<p align="center">
-  The fourth iteration of <a href="https://ananyatw.github.io/" target="_blank">ananyatw.github.io/</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
-</p>
 
 ## 🛠 Installation & Set Up
 
