@@ -2,7 +2,7 @@
 <h1 align="center">
   ananyatw.github.io
 </h1>
-
+<p><center>credit to brittney chiang v4 for this template</center></p>
 ## 🛠 Installation & Set Up
 
 1. Install the Gatsby CLI
