@@ -74,8 +74,7 @@ const StyledProject = styled.li`
     border-radius: var(--border-radius);
     background-color: rgba(17, 34, 64, 0.55);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7),
-      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(12px) saturate(140%);
     -webkit-backdrop-filter: blur(12px) saturate(140%);
     transition: var(--transition);
@@ -85,6 +84,9 @@ const StyledProject = styled.li`
   .project-top {
     ${({ theme }) => theme.mixins.flexBetween};
     margin-bottom: 35px;
+    /* Sit above .project-title a:before (full-card hit target for the title link) so GitHub / external icons stay clickable */
+    position: relative;
+    z-index: 2;
 
     .folder {
       color: var(--green);
@@ -177,7 +179,7 @@ const Projects = () => {
       projects: allMarkdownRemark(
         filter: {
           fileAbsolutePath: { regex: "/content/projects/" }
-          frontmatter: { placeholder: { eq: true } }
+          frontmatter: { showInProjects: { eq: true } }
         }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
